@@ -1,0 +1,117 @@
+:root {
+    --color-background: #0A0F14;
+    --color-surface: #151D25;
+    --color-accent: #21C474;
+    --color-text: #FFFFFF;
+    --color-muted: #A7B0BA;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    color: var(--color-text);
+}
+
+.brand-accent,
+.text-accent {
+    color: var(--color-accent);
+}
+
+.navbar .nav-link {
+    color: var(--color-muted);
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--color-accent);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: #07110B;
+    border: 1px solid var(--color-accent);
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.7rem 1.2rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-accent:hover {
+    background-color: #19AD65;
+    border-color: #19AD65;
+    color: #07110B;
+    transform: translateY(-1px);
+}
+
+.hero-section {
+    padding: 5rem 0;
+    background:
+        radial-gradient(
+            ellipse at 80% 20%,
+            rgba(33, 196, 116, 0.10),
+            transparent 45%
+        ),
+        var(--color-background);
+}
+
+.min-vh-75 {
+    min-height: 65vh;
+}
+
+.hero-label {
+    display: inline-block;
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-title {
+    max-width: 800px;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.hero-description {
+    max-width: 600px;
+    color: var(--color-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.site-footer {
+    padding: 1.5rem 0;
+    color: var(--color-muted);
+    background-color: var(--color-surface);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        align-items: stretch !important;
+        padding-top: 1rem;
+    }
+
+    .hero-section {
+        padding: 4rem 0;
+    }
+
+    .min-vh-75 {
+        min-height: 55vh;
+    }
+}
